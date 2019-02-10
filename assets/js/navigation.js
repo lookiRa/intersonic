@@ -9,7 +9,7 @@ var nav = document.getElementById('navbar');
 var stick = page.offsetTop;
 
 function scroll(){
-    if (window.pageYOffset >= 780){
+    if (window.pageYOffset >= 760){
         nav.classList.add('pagenav')
         
     } else {

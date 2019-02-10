@@ -50,6 +50,10 @@ main{
     justify-content: flex-start;
 }
 
+.top{
+    align-items: flex-start;
+}
+
 /* NAV BAR  */
 
 #navbar a{
@@ -150,6 +154,13 @@ main{
         font-size: 0.9em;
     }
 
+    #home h2 > a{
+        color: #ffffff;
+        font-size: 3em;
+        padding: 2%;
+        text-decoration: none;
+    }
+
     
 
 /* SECTIONS */
@@ -167,11 +178,11 @@ main{
 
     #services .left{
         width: 60%;
-        margin: 2%;
+        margin: 0% 2%;
     }
 
         #services .left > h3{
-            font-size: 2.1em;
+            font-size: 1.39em;
             line-height: 150%;
             letter-spacing: 1px;
             font-weight: 500;
@@ -179,15 +190,20 @@ main{
 
         #services p{
             font-weight: 300;
-            font-size: 1.2em;
+            font-size: 1em;
             font-family: 'Montserrat', sans-serif;
             letter-spacing: 2px;
             line-height: 150%;
         }
 
     #services .right{
-        width: 18%
+        width: 18%;
     }
+
+        #services .right p:nth-child(odd){
+            text-transform: uppercase;
+            font-size: 1.05em;
+        }
 
 
     .toppad{
