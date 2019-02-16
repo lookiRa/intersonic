@@ -1,5 +1,16 @@
+/* JS STYLING */
+#_progress {
+    --scroll: 0%;
+    background: linear-gradient(to right, rgb(250, 55, 1) var(--scroll), transparent 0);
+    position: fixed;
+    width: 100%;
+    height: 5px;
+    top: 0px;
+    z-index: 100;
+}
+
 *{
-    transition: 0.5s;
+    transition: 1s;
 }
 
 body,html,main{
@@ -13,6 +24,7 @@ body,html,main{
 nav{
     width: 100%;
     height: 85px;
+    padding-top: 5px;
     display: flex;
     position: fixed;
     z-index: 5;
@@ -30,10 +42,39 @@ a{
     text-decoration: none;
 }
 
+h1{
+    text-transform: uppercase;
+    font-size: 2.4em;
+    letter-spacing: 2.5px;
+    line-height: 150%;
+    text-shadow: 1px 1px 6px #161616;
+}
+
+h2{
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
 .auto-container{
     width: 95%;
     max-width: 1080px;
     margin: 0 auto;
+}
+
+.full{
+    height: 100%;
+}
+
+.dark, .light{
+    padding: 5% 0%;
+}
+
+.dark{
+    background-color: #161616;
+}
+
+.light{
+    background-color: #ffffff;
 }
 
     /* Flexbox classes */
@@ -63,8 +104,22 @@ a{
         justify-content: flex-end;
     }
 
+    .box{
+        width: 48%;
+        max-width: 520px;
+    }
     /* END Flexbox classes */
 
+    /* Parallax */
+    .parallax{
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size:cover!important;
+        background-position: center;
+    }
+    /* END Parallax */
+
+    
 /* Navigation Styling Start */
 
     .navleft{
@@ -113,6 +168,7 @@ a{
 
                 .dropnav ul{
                     background-color: #161616;
+                    box-shadow: 1px 1px 10px #191919;
                     width: 300px;
                     border-radius: 8px;
                     padding: 4%;
@@ -123,9 +179,10 @@ a{
                         width: 100%;
                         margin: 2%;
                     }
-
-            .hovernav:hover .dropnav{
-                display: block;
+            @media only screen and (min-width:756px){
+                .hovernav:hover .dropnav{
+                    display: block;
+                }
             }
 
     .pagenav{
@@ -147,13 +204,24 @@ a{
     z-index: 1;
 }
 
+.wtext{
+    color: #ffffff;
+}
+
+.homesocial{
+    font-size: 2em;
+    padding: 2%;
+    text-decoration: none;
+}
+
+
 /* Homepage Styling End */
 
 
 /* MEDIA QUERIES */
 
 @media only screen and (max-width:775px){
-    
+
     #navlist{
         position: absolute;
         width: 300px;
@@ -167,6 +235,8 @@ a{
     #navlist li{
         width: 100%;
         display: block;
+        margin: 4%;
+        font-size: 1.5em;
     }
 
     #hamburger{
@@ -175,6 +245,26 @@ a{
 
     .show{
         display: block!important;
+    }
+
+
+
+    .dropnav{
+        position: unset;
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+    }
+
+        .dropnav ul{
+            border-radius: 0px;
+            box-shadow:none;
+            padding: 0;
+            font-size: initial;
+        }
+    
+    .hovernav:hover .dropnav{
+        display: block;
     }
 }
 
