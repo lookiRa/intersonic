@@ -1,248 +1,180 @@
-/************************************************************************
-                       GENERAL STYLING
-*************************************************************************/
-
-body{
-    background-color: #2D2733;
-    font-family: 'Open Sans', sans-serif;
-    color: #ffffff;
+*{
+    transition: 0.5s;
 }
 
-
-/*************************************************************************
-                        STRUCTURAL STYLING
-*************************************************************************/
-
-body{
+body,html,main{
+    width: 100%;
+    height: 100%;
     margin: 0;
-    padding: 0;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif;
     display: block;
 }
 
-.auto-container{
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.flex{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.top-container, .nav-container{
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.top-container{
-    min-height: 50px;
-}
-
-#nav-bar{
-    background: rgba(0, 0, 0, 0.5);
-    overflow: hidden;
+nav{
     width: 100%;
     height: 85px;
+    display: flex;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    display: block;
 }
 
-.nav-container{
-    height: 100%;
+main{
+    position: absolute;
+    top: 0;
 }
 
-.content {
-    padding: 16px;
-}
-
-.sticky + .content {
-padding-top: 60px;
-}  
-
-.nav-links{
-    width: 100%;
-    max-width: 500px;
-    justify-content: space-evenly;
-}
-
-.nav-links a{
-    padding: 0% 1% 0% 2%;
-}
-
-.mobnav{
-    display: none;
-    padding-right: 23px;
-    font-size: 2.2em;
-}
-
-.moblinks{
-    display: none;
-}
-
-.intro-body , .about-container{
-    justify-content: flex-start;
-    padding: 2% 0% 5% 2%;
-    width: 40%;
-}
-
-.intro-body a{
-    background: none;
-    padding: 1%;
-    border: 1px solid #ffffff;
-    margin: 1%;
-}
-
-.about-container{
-    width: 80%;
-    margin: 0 auto;
-    margin-left: 1%;
-}
-
-/*************************************************************************
-                        PARALLAX STYLING
-*************************************************************************/
-
-.parallax{
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover!important;
-    background-position: center;
-}
-
-.homeblock{
-    background-image: url(/assets/images/backgrounds/pbg1.jpg);
-}
-
-#about{
-    background-image: url(/assets/images/backgrounds/pbg2.jpg);
-    margin: 0;
-    padding: 1%;
-}
-
-
-/*************************************************************************
-                        TEXT STYLING
-*************************************************************************/
-
-a {
-    font-weight: 300;
+a{
     color: #ffffff;
     text-decoration: none;
 }
 
-.top-container a{
-    text-decoration: underline;
+.auto-container{
+    width: 95%;
+    max-width: 1080px;
+    margin: 0 auto;
 }
 
-.top-container a:hover{
-    color: #fa3701;
-}
+    /* Flexbox classes */
 
-.intro-body h1 h2 p{
-    padding-left: 2%;
-    font-weight: normal;
-}
+    .flex{
+        display: flex;
+        align-items: center;
+    }
 
-.intro-body h1{
-    text-transform: uppercase;
-    letter-spacing: 1.2em;
-}
+    .wrap{
+        flex-wrap: wrap;
+    }
 
-.intro-body h2{
-    font-size: 2em;
-    margin-bottom: 0;
-}
+    .between{
+        justify-content: space-between;
+    }
 
-.intro-body a{
-    font-size: 1.1em;
-    padding: 2%;
-    text-decoration: none;
-    width: 6.3em;
-    text-align: center;
-}
+    .center{
+        justify-content: center;
+    }
 
-.intro-body a:hover{
-    background-color: #ffffff;
-    color: #171717;
-}
+    .start{
+        justify-content: flex-start;
+    }
 
-.about-container h2 h4 {
-    line-height: 2em;
-    letter-spacing: 1.2em;
-    font-weight: normal;
-}
+    .end{
+        justify-content: flex-end;
+    }
 
-/*************************************************************************
-                        IMAGE STYLING
-*************************************************************************/
+    /* END Flexbox classes */
 
-.nav-container img{
-    width: 100%;
-    max-width: 240px;
-    height: auto;
-}
+/* Navigation Styling Start */
 
-/*************************************************************************
-                        @MEDIA QUERIES STYLES
-*************************************************************************/
+    .navleft{
+        width: 30%;
+        max-width: 241px;
+    }
 
-@media only screen and (max-width:1192px){
-    .intro-body{
+        .navleft img{
+            width: 100%;
+            max-width: 241px;
+        }
+
+    .navright{
         width: 60%;
     }
+
+        #hamburger{
+            display:none;
+            font-size: 2em;
+            text-align: end;
+        }
+
+        .navright ul{
+            list-style-type: none;
+            display: inline-flex;
+            width: 100%;
+            padding: 0;
+        }
+
+        .navright ul > li{
+            display: inline;
+            margin: 0% 2%;
+        }
+
+        .navright ul > li a:hover{
+            color: #fa3701;
+        }
+
+            .dropnav{
+                
+                position: absolute;
+                z-index: 2;
+                padding-top: 1%;
+                display: none;
+            }
+
+                .dropnav ul{
+                    background-color: #161616;
+                    width: 300px;
+                    border-radius: 8px;
+                    padding: 4%;
+                }
+
+                    .dropnav ul > li{
+                        display: block;
+                        width: 100%;
+                        margin: 2%;
+                    }
+
+            .hovernav:hover .dropnav{
+                display: block;
+            }
+
+    .pagenav{
+        background-color: #161616;
+        height: 82px;
+    }
+
+
+    
+/* Navigation Styling End */
+
+/* Homepage Styling */
+
+.home{
+    background-image: url(/assets/images/backgrounds/pbg1.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 
-
-@media only screen and (max-width:795px){
-    .intro-body{
-        width: 90%;
-    }
-
-    .top-container{
-        display: none;
-    }
-}
+/* Homepage Styling End */
 
 
-@media only screen and (max-width:706px){
-    .nav-links{
-        display: none;
-    }
+/* MEDIA QUERIES */
 
-   .mobnav {
-        display: block;
-        float: right;
-        width: 100%;
+@media only screen and (max-width:775px){
+    
+    #navlist{
         position: absolute;
-        top: 4%;
-        right: -95%;
+        width: 300px;
+        background-color: #161616;
+        right: 6px;
+        border-radius: 8px;
+        padding: 3%;
+        display: none;
     }
 
-    .mobnav:hover .moblinks{
+    #navlist li{
+        width: 100%;
         display: block;
-        background-color: #171717;
-        font-size: 1em;
-        position: relative;
-        text-align: center;
-        left: -93%;
-        padding: 2%;
-        width: 101%;
-        line-height: 150%;
     }
 
-    .moblinks li{
-        width: 100%;
-        padding: 2% 0%;
-        list-style-type: none;
+    #hamburger{
+        display: block;
     }
 
-    .navHov:hover {
-        text-transform: uppercase;
-        font-weight: bold;
-        font-size: 1.1em;
-        width: 100%;
+    .show{
+        display: block!important;
     }
 }
 
@@ -254,13 +186,30 @@ a {
 
 
 
-/*************************************************************************
-                        JAVASCRIPT STYLES
-*************************************************************************/
 
-.sticky{
-    position: fixed;
-    top: 0;
-    background:#171717!important;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
