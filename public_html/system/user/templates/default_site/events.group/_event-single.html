@@ -1,1 +1,23 @@
 {layout="site/main"}
+{exp:channel:entries channel="events" dynamic="no" limit="1"}
+<div class="parallax eventsingle">
+    <div class="auto-container full flex center">
+        <h1>{title}</h1>
+    </div>
+</div>
+<section class="light">
+    <div class="auto-container flex between wrap top">
+        <div class="box">
+            <h2>{event_date format="%F %d %Y"}, {event_location}</h2>
+            <h3>{event_time}</h3>
+            <p>
+                {event_details}
+            </p>
+        </div>
+        <div class="box dark">
+            <img src="{media_content}" style="width:100%;"/>
+            
+        </div>
+    </div>
+</section>
+{/exp:channel:entries}
