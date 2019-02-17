@@ -13,6 +13,10 @@
     transition: 1s;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 body,html,main{
     width: 100%;
     height: 100%;
@@ -143,21 +147,6 @@ h2{
         background-size: contain;
     }
     /* END Parallax */
-
-    /* Flickity carousel */
-
-    .carousel-cell{
-        width: 100%;
-        height: 100%;
-        max-height: 259.20px;
-        overflow: hidden;
-    }
-
-    .carouselbox{
-        width: 44%;
-    }
-
-    /* Flickity carousel END */
 
     
 /* Navigation Styling Start */
@@ -296,8 +285,12 @@ h2{
         background-color:#ffffff;
         width: 100%;
         margin: 2%;
-        box-shadow: 2px 2px 6px #aaaaaa;
+        box-shadow: 2px 2px 6px #000000;
     }
+
+        .previewblock:hover{
+            transform: scale(1.1);
+        }
 
     .previewblock > .date{
         height: 100%;
@@ -305,8 +298,9 @@ h2{
         max-width: 69.33px;
         max-height: 69.33px;
         background-color: #161616;
+        border: 1px solid #161616;
         text-align: center;
-        padding: 1%;
+        padding: 3%;
         position: relative;
         top: 0;
         left: 0;
@@ -354,6 +348,8 @@ h2{
 
 
 /* MEDIA QUERIES */
+
+
 
 @media only screen and (max-width:775px){
 
