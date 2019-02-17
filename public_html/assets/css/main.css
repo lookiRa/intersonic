@@ -204,6 +204,7 @@ h2{
 
     .pagenav{
         background-color: #161616;
+        box-shadow: 2px 0px 10px #111111;
         height: 71px;
     }
 
@@ -256,6 +257,47 @@ h2{
 
 
 /* Homepage Styling End */
+
+/* Events pages styling */
+
+    .event{
+        background-image: url(/assets/images/backgrounds/pbg1.jpg);
+        background-position: top;
+        background-size: 100%!important;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .previewblock{
+        background-color:#ffffff;
+        width: 70%;
+        padding: 2%;
+    }
+
+    .previewblock > .date{
+        height: 100%;
+        width:100%;
+        max-width: 100px;
+        max-height: 100px;
+        background-color: #161616;
+    }
+
+        .date > .day, .date > .month{
+            width: 100%;
+            color: #ffffff;
+        }
+
+        .date > .day{
+            font-size:2.2em;
+            text-align: center;
+        }
+
+        .date > .month{
+            text-align: right;
+        }
+
+/* Events pages styling */
 
 
 /* MEDIA QUERIES */
