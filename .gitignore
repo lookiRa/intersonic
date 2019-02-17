@@ -1,1 +1,12 @@
 .vscode/
+
+.env.php
+.htaccess
+LICENSE.txt
+/public_html/admin.php
+/public_html/index.php
+
+
+/public_html/assets/images
+/public_html/assets/video
+

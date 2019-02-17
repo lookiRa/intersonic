@@ -1,0 +1,10 @@
+
+{if segment_2}
+	{if segment_2 ~ "/^P\d+/"}
+		{embed='events/_event-archive'}
+	{if:else}
+		{embed='events/_event-single'}
+	{/if}
+{if:else}
+	{embed='events/_event-archive'}	
+{/if}

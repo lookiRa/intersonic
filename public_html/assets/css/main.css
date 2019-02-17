@@ -76,7 +76,7 @@ h2{
 }
 
 .dark{
-    background-color: #161616;
+    background-color: #282828;
 }
 
 .light{
@@ -146,7 +146,7 @@ h2{
 
         .navleft img{
             width: 100%;
-            max-width: 241px;
+            max-width: 230px;
         }
 
     .navright{
@@ -171,7 +171,7 @@ h2{
             margin: 0% 2%;
         }
 
-        .navright ul > li a:hover, .blocklink a:hover{
+        .navright ul > li a:hover{
             color: #fa3701;
         }
 
@@ -204,7 +204,7 @@ h2{
 
     .pagenav{
         background-color: #161616;
-        height: 82px;
+        height: 71px;
     }
 
 
@@ -233,22 +233,25 @@ h2{
 }
 
 .blocklink{
-    padding: 15% 0%;
+    padding: 10% 0%;
     display: block;
 }
 
-    .blocklink a{
-        padding: 4%;
-        border: 1px solid #ffffff;
+    .blocklink p, .blocklink a{
+        text-align: center;
+        text-shadow: 2px 2px 6px #161616;
         display: block;
         margin: 0 auto;
-        width:200px;
-        font-size: 1.5em;
-        text-align: center;
     }
 
-    .blocklink a:hover{
-        border: 1px solid #fa3701;
+    .blocklink p{
+        padding: 4%;
+        font-size: 2.1em;
+        text-transform:uppercase;
+    }
+
+    .blocklink a{
+        font-size: 1.2em;
     }
 
 
@@ -258,6 +261,19 @@ h2{
 /* MEDIA QUERIES */
 
 @media only screen and (max-width:775px){
+
+    .navleft{
+        width:90%;
+    }
+
+
+        .navleft img{
+            max-width: 241px;
+        }
+
+    .navright{
+        width: 10%;
+    }
 
     #navlist{
         position: absolute;
