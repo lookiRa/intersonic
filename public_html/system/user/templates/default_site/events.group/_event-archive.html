@@ -4,23 +4,27 @@
 <div class="parallax event">
     
 </div>
-<section class="dark">
-    <div class="auto-container">
-        {exp:channel:entries channel="events" limit="1" paginate="bottom"}
+<section class="light">
+    <div class="auto-container flex wrap between top">
+        {exp:channel:entries channel="events" limit="5" paginate="bottom"}
 
             <div class="previewblock flex start wrap">
                 <div class="date">
-                    <span class="day">{event_date format="%M"}</span><br/>
-                    <span class="month">{event_date format="%d"}</span>
+                    <span class="day">{event_date format="%d"}</span><br/>
+                    <span class="month">{event_date format="%M"}</span>
                 </div>
                 <div class="eventtext">
                     <a href="{url_title}">{title}</a>
                 </div>
-            </div>            
+            </div>     
 
             {paginate}
                 {pagination_links}
             {/paginate}
         {/exp:channel:entries}
+        
+        <div class="carouselbox">
+            
+        </div>    
     </div>
 </section>
